@@ -14,7 +14,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '7.0.x' # リポジトリが対応している.NET 7を指定しています
+        dotnet-version: '8.0.x' # 最新の.NET 8環境をセットアップします
 
     - name: Restore dependencies
       run: dotnet restore
@@ -27,4 +27,4 @@ jobs:
       with:
         name: Il2CppDumper-latest
         path: |
-          Il2CppDumper/bin/Release/net7.0/
+          Il2CppDumper/bin/Release/net*/
